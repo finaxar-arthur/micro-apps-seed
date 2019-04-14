@@ -1,5 +1,6 @@
 import React from "react";
-import { Spin, Empty } from "antd";
+import { Empty } from "antd";
+import Loading from "../components/Loading";
 
 const Books: React.FC<{
   loading?: boolean;
@@ -8,7 +9,7 @@ const Books: React.FC<{
   const { loading = false, data: { books = [] } = {} } = props;
 
   if (loading) {
-    return <Spin />;
+    return <Loading />;
   }
 
   return (
