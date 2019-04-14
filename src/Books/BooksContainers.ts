@@ -3,7 +3,7 @@ import gql from "graphql-tag";
 
 export const withBooksContainers = compose(
   graphql(gql`
-    query BooksQUery {
+    query BooksQuery {
       books {
         title
         author

@@ -3,9 +3,9 @@ import { Spin, Empty } from "antd";
 
 const Books: React.FC<{
   loading?: boolean;
-  books?: { title: string; author: string }[];
+  data?: { books?: { title: string; author: string }[] };
 }> = props => {
-  const { loading = false, books = [] } = props;
+  const { loading = false, data: { books = [] } = {} } = props;
 
   if (loading) {
     return <Spin />;
