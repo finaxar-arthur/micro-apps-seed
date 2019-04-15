@@ -1,16 +1,10 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import { Button } from "@storybook/react/demo";
-import Loading from "../src/components/Loading";
 
-storiesOf("Button", module)
-  .add("with text", () => <Button>Hello Button</Button>)
-  .add("with emoji", () => (
-    <Button>
-      <span role="img" aria-label="so cool">
-        😀 😎 👍 💯
-      </span>
-    </Button>
-  ));
+import Loading from "../src/components/Loading";
+import Button from "../src/components/Button";
 
 storiesOf("Loading", module).add("default", () => <Loading />);
+storiesOf("Button", module)
+  .add("default", () => <Button>Default</Button>)
+  .add("primary", () => <Button type="primary">Primary</Button>);
