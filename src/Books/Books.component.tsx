@@ -8,7 +8,7 @@ import Loading from "../components/Loading";
 
 const Books: React.FC<{
   loading?: boolean;
-  data?: { books?: { title: string; author: { name: string } }[] };
+  data?: { books?: { title: string; authors: { name: string }[] }[] };
 }> = props => {
   const { loading = false, data: { books = [] } = {} } = props;
 
@@ -28,7 +28,11 @@ const Books: React.FC<{
             return (
               <div>
                 <div>title: {book.title}</div>
-                <div>author: {book.author.name}</div>
+                <div>
+                  {book.authors.map(author => (
+                    <span>{author.name}</span>
+                  ))}
+                </div>
               </div>
             );
           })
