@@ -2,6 +2,7 @@ import React from "react";
 import { Empty } from "antd";
 import { FormattedMessage } from "react-intl.macro";
 import logo from "./logo.png";
+import { BooksTitle } from "./Books.style";
 
 import Loading from "../components/Loading";
 
@@ -17,10 +18,10 @@ const Books: React.FC<{
 
   return (
     <div>
-      <h1>
+      <BooksTitle>
         <img src={logo} alt="Logo" />
         <FormattedMessage id="books.title" defaultMessage="List of books" />
-      </h1>
+      </BooksTitle>
       <div>
         {books.length > 0 ? (
           books.map(book => {
