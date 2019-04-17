@@ -1,5 +1,7 @@
 import React from "react";
 import { Empty } from "antd";
+import { FormattedMessage } from "react-intl.macro";
+
 import Loading from "../components/Loading";
 
 const Books: React.FC<{
@@ -14,7 +16,9 @@ const Books: React.FC<{
 
   return (
     <div>
-      <h1>List of books</h1>
+      <h1>
+        <FormattedMessage id="books.title" defaultMessage="List of books" />
+      </h1>
       <div>
         {books.length > 0 ? (
           books.map(book => {
