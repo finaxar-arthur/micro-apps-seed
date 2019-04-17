@@ -28,4 +28,4 @@ const books = [
 storiesOf("Books", module)
   .add("no books", () => <Books />)
   .add("loading", () => <Books loading={true} />)
-  .add("with books", () => <Books data={{ books: books }} />);
+  .add("with books", () => <Books data={{ books }} />);

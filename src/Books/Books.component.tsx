@@ -25,12 +25,14 @@ const Books: React.FC<{
       <div>
         {books.length > 0 ? (
           books.map(book => {
+            const { title, authors } = book;
+
             return (
-              <div>
-                <div>title: {book.title}</div>
+              <div key={title}>
+                <div>title: {title}</div>
                 <div>
-                  {book.authors.map(author => (
-                    <span>{author.name}</span>
+                  {authors.map(author => (
+                    <span key={author.name}>{author.name}</span>
                   ))}
                 </div>
               </div>
