@@ -8,7 +8,7 @@ import zhLocaleData from "react-intl/locale-data/zh";
 import translations from './i18n/locales';
 
 import { ApolloProvider } from "react-apollo";
-import client from "./apollo";
+import apolloClient from "./apollo";
 import Books from "./Books";
 
 addLocaleData(enLocaleData);
@@ -21,7 +21,7 @@ const localeProp = "en";
 class App extends Component {
   render() {
     return (
-      <ApolloProvider client={client}>
+      <ApolloProvider client={apolloClient}>
         <IntlProvider
           locale={localeProp}
           defaultLocale="en"

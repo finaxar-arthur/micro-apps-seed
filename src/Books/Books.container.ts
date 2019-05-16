@@ -6,12 +6,29 @@ const BOOKS_QUERY = gql`
     books {
       title
       author {
-         name
+        name
       }
     }
   }
 `;
 
-const withBooks = graphql(BOOKS_QUERY);
+const BOOKS_ADDED_SUBSCRIPTION = gql`
+  subscription onBookAdded {
+    bookAdded {
+      books {
+        title
+        author {
+          name
+        }
+      }
+    }
+  }
+`;
 
-export const withBooksContainers = compose(withBooks);
+const withBooksQuery = graphql(BOOKS_QUERY);
+const withBooksAddedSubscription = graphql(BOOKS_ADDED_SUBSCRIPTION);
+
+export const withBooksContainers = compose(
+  withBooksQuery,
+  withBooksAddedSubscription
+);

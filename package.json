@@ -15,6 +15,7 @@
     "apollo-link": "^1.2.11",
     "apollo-link-error": "^1.1.10",
     "apollo-link-http": "^1.5.14",
+    "apollo-link-ws": "^1.0.17",
     "babel-plugin-macros": "^2.5.1",
     "graphql": "^14.2.1",
     "graphql-tag": "^2.10.1",
@@ -25,6 +26,7 @@
     "react-intl.macro": "^0.3.6",
     "react-scripts": "3.0.0",
     "styled-components": "^4.2.0",
+    "subscriptions-transport-ws": "^0.9.16",
     "typescript": "3.4.3"
   },
   "scripts": {
