@@ -6,9 +6,16 @@ import { BooksTitle } from "./Books.style";
 
 import Loading from "../components/Loading";
 
+interface Book {
+    title: string;
+    authors: {
+        name: string
+    }[]
+}
+
 const Books: React.FC<{
   loading?: boolean;
-  data?: { books?: { title: string; authors: { name: string }[] }[] };
+  data?: { books?: Book[] };
 }> = props => {
   const { loading = false, data: { books = [] } = {} } = props;
 

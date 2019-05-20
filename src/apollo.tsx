@@ -3,7 +3,7 @@ import { InMemoryCache } from "apollo-cache-inmemory";
 import { HttpLink } from "apollo-link-http";
 import { onError } from "apollo-link-error";
 import { ApolloLink } from "apollo-link";
-import { WebSocketLink } from "apollo-link-ws";
+// import { WebSocketLink } from "apollo-link-ws";
 
 const httpLink = new HttpLink({
   uri: "http://localhost:4000",
